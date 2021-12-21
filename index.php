@@ -2,8 +2,14 @@
 
 class Product{
     public $name;
-    public $price;
-    public $isInStock = true;
+    protected $price;
+    protected $isInStock = true;
+
+    function __construct(String $name, float $price, bool $isInStock){
+        $this->name = $name;
+        $this->price = $price;
+        $this->isInStock = $isInStock;
+    }
 }
 
 class CreditCard{
@@ -56,3 +62,6 @@ $user_1 = new User('giovanni', 'belda', 'gbelda@gmail.com');
 $c = new CreditCard(12345678, 1022 ,233);
 $user_1->AddCard($c);
 var_dump($user_1);
+
+$user_2 = new PremiumUser('john', 'doe', 'johndoe@gmail.com');
+var_dump($user_2);
