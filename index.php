@@ -11,7 +11,13 @@ class CreditCard{
     protected $cardExpDate;
     protected $cvv;
 
-    function __construct(int $cardNumber, int $cardExpDate, int $cvv)
+    /**
+     *  @param int $cardNumber insert card 16-digit number
+     * @param string $cardExpDate insert expiration date MM/YY
+     * @param int $cvv insert 3-digit code from back of the card
+     */
+
+    function __construct(int $cardNumber, string $cardExpDate, int $cvv)
     {
         $this->cardNumber = $cardNumber;
         $this->cardExpDate = $cardExpDate;
