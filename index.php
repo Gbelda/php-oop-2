@@ -52,16 +52,18 @@ class User extends CreditCard{
 }
 
 class PremiumUser extends User{
-
-
+    
     public $discount = 10;
 
 }
 
 $user_1 = new User('giovanni', 'belda', 'gbelda@gmail.com');
-$c = new CreditCard(12345678, 1022 ,233);
+$c = new CreditCard(123456789101123, '10/22' ,233);
 $user_1->AddCard($c);
 var_dump($user_1);
 
+
 $user_2 = new PremiumUser('john', 'doe', 'johndoe@gmail.com');
+$c2 = new CreditCard(213452313212312, '12/25', 342);
+$user_2->AddCard($c);
 var_dump($user_2);
